@@ -1,0 +1,4 @@
+<meta>
+ <info name="Company.RageMpServerResource" type="script" />
+ <script src="build/netcoreapp2.0/Company.RageMpServerResource.dll" />
+</meta>
