@@ -1,0 +1,74 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Dave Horsefield",
+    "description" : "This template creates a RAGE-MP server resource defaulted to netcoreapp2.0. 
+    	The settings.xml is linked to the project for easy access to add the resource.",
+    "classifications": [ "RageMp", "Server" ],
+    "groupIdentity": "RageMpServer",
+    "identity": "RAGEmpServer",        
+    "name": "RAGEMP - Server Side Resource csproj",
+    "shortName": "rage-serverproj",
+    "symbols": {
+
+
+      "serverdir":{
+        "description": "The server-files directory to set server.exe for debugging. (USE / for path seperator)",
+        "type":"parameter",
+        "datatype" : "text",
+        "isRequired" : false,
+        "defaultValue": "E:/RAGEMP/server-files",
+        "replaces": "ragemp-server-files-dir"
+      },
+
+      "framework":{
+        "description": "The target framework for the project.",
+        "type":"parameter",
+        "datatype": "choice",
+        "defaultValue":"netcoreapp2.0",        
+        "choices": [
+          {
+              "choice": "netcoreapp2.0",
+              "description": "Target netcoreapp2.0"
+          },
+          {
+              "choice": "netcoreapp2.1",
+              "description": "Target netcoreapp2.1"
+          },
+          {
+              "choice": "netcoreapp2.2",
+              "description": "Target netcoreapp2.2"
+          },          {
+              "choice": "netcoreapp3.0",
+              "description": "Target netcoreapp3.0"
+          },
+        ],
+        "replaces":"netcoreapp2.0"
+      },
+
+      "buildfolder" :{
+        "type":"parameter",
+        "datatype" : "text",
+        "description": "Specify output folder defaulted to build\\. This default copies to Company.RageMpServerResource\\build\netcoreapp2.0",
+        "replaces" : "build\\"
+      }
+    },
+    "sources": 
+    [{
+      "source": "./",
+      "target": "./",
+      "exclude": [
+        ".template.config/**"]}
+    ],
+    "tags": {
+        "language": "[C#]",
+        "type": "project"
+        },    
+    "sourceName": "Company.RageMpServerResource",
+    "preferNameDirectory": true    
+        },    
+    "primaryOutputs": [
+        {
+          "path": "Company.RageMpServerResource.csproj"
+        }
+    ]
+}

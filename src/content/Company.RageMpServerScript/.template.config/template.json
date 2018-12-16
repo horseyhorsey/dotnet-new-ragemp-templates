@@ -1,0 +1,58 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Dave Horsefield",
+    "description" : "Creates a RAGE-MP server script",
+    "classifications": [ "RageMp", "Server" ],
+    "groupIdentity": "RAGEmpServerScript",
+    "identity": "RAGEmpServerScript",        
+    "name": "RAGEMP - Server Side Script",
+    "shortName": "rage-serverscript",
+    "symbols": {
+	    "generateMetaXml":{
+		    "type": "parameter",
+		    "dataType":"bool",
+		    "defaultValue": "true"
+		    },        
+        "scriptType":{
+        "description": "The type of script.",
+        "type":"parameter",
+        "datatype": "choice",
+        "defaultValue":"script",        
+        "choices": [
+          {
+              "choice": "gamemode",
+              "description": "Script is a gamemode"
+          },
+          {
+              "choice": "script",
+              "description": "Script is std script"
+          }          
+        ]
+     }},
+    "sources": 
+    [{
+      "source": "./",
+      "target": "./",
+      "modifiers": [
+            {
+                "condition": "(!generateMetaXml)",
+                "exclude": [ "meta.xml" ]
+            }
+        ],
+      "exclude": [
+        ".template.config/**"]
+  	}
+    ],
+    "tags": {
+        "language": "[C#]",
+        "type": "script"
+        },    
+    "sourceName": "Company.RageMpServerScript",
+    "preferNameDirectory": true    
+        },    
+    "primaryOutputs": [
+        {
+          "path": "Company.RageMpServerScript"
+        }
+    ]
+}
