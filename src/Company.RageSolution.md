@@ -1,21 +1,28 @@
 # RageMp Server / Client side Solution
 
-This is for creating a solution anywhere but linked to your RAGEMP install path when building.
+This is for creating a solution anywhere but linked to your RAGEMP install path when building. All debugging etc is setup and ready to go.
 
-All debugging etc is setup and ready to go.
+**NOTE:** ***Use / for rage install path to steer clear of json errors***
 
-**Use / for rage install path to stay away from json error**
+---
 
 ### Generate solution
+
+This generates a visual studio solution with projects needed.
 	
 	dotnet new rage-solution -r "E:/RAGEMP" -s MyBeastSolution
 
+This generates a visual studio solution with projects needed and specifying a directory.
+
 	dotnet new rage-solution -r "E:/RAGEMP" -s MyBeastSolution -n MyBeastSolution
+
+
+**Params:**
 
 	-r Rage install path
 	-s Solution Name
 
-This generates a visual studio solution with projects needed.
+**Output structure:**
 
 	MyBeastSolution
 		+ Client-Side
@@ -31,6 +38,16 @@ This generates a visual studio solution with projects needed.
 				- meta.xml
 				- settings.xml (linked to the install path in params)
 
+
+When solution is generated, open it and edit the **settings.xml** by adding
+
+	<resource>MyBeastSolution</resource>
+
+Now you can run the server project in debug.
+
+---
+
+# Projects Info
 
 ### Server-Side
 When the Server builds, it will only copy the needed references to:
@@ -48,3 +65,9 @@ On building, only the .cs are copied. Folders containing .cs files are also copi
 The csharp files are copied to:
 
 	{RAGEMP_InstallDir}\server-files\client_packages\cs_packages\MyBeastSolution.Client
+
+### Client-Side Web
+
+Made as an existing Website that contains a publishing profile. The published contents go into:
+
+	{rageinstallpath}\server-files\client_packages\MyBeastSolution_UI
