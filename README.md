@@ -23,7 +23,7 @@ You should run this command inside your resources folder. **RAGEMP\server-files\
 
 ***Use -n to specify name for the folder and resource to create.***
 
-	dotnet new ragemp-serverproj -n BeastServerResourceProject
+	dotnet new rage-serverproj -n BeastServerResourceProject
 
 
 ## Params
@@ -38,7 +38,7 @@ This sets to server.exe for debugging. **(Use / for path seperator)**
 
 Specify output folder. 	
 
-	dotnet new ragemp-serverproj -n BeastServerResourceProject -serverdir "C:/RAGEMP/server-files" -b build
+	dotnet new rage-serverproj -n BeastServerResourceProject -serverdir "C:/RAGEMP/server-files" -b build
 
 This will edit the meta.xml:
 
@@ -48,7 +48,7 @@ This will edit the meta.xml:
 
 See framework choices in general help
 	
-	dotnet new ragemp-serverproj -h
+	dotnet new rage-serverproj -h
 
 
 
