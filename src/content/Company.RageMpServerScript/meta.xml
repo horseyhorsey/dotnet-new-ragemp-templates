@@ -1,0 +1,13 @@
+<meta>
+<!--#if (scriptType == "script")-->
+ 	<info name="Company.RageMpServerScript" type="script" />
+ <!--#endif-->
+<!--#if (scriptType == "gamemode")-->
+ 	<info name="Company.RageMpServerScript" type="gamemode" />
+ 	<!-- <include resource="playerblips" /> -->
+    <settings>
+    	<settings name="my_settings" value="69" description="Example number" />
+    </settings> 	
+ <!--#endif-->    
+ 	<script src="Company.RageMpServerScript.cs" />
+</meta>

@@ -1,0 +1,51 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Dave Horsefield",
+    "description" : "Creates a RAGE-MP Client script",
+    "classifications": [ "RageMp", "Client" ],
+    "groupIdentity": "RAGEmpClientScript",
+    "identity": "RAGEmpClientScript",        
+    "name": "RAGEMP - Client Side Script",
+    "shortName": "rage-clientscript",
+    "symbols": {    
+        "scriptType":{
+        "description": "The type of script.",
+        "type":"parameter",
+        "datatype": "choice",
+        "defaultValue":"script",        
+        "choices": [
+          {
+              "choice": "script",
+              "description": "Standard client script with command examples"
+          },
+          {
+              "choice": "nativeui",
+              "description": "Client script with nativeUI example"
+          },
+          {
+          	"choice" : "events",
+          	"description" : "Client script with example events"
+          }    
+        ]
+     }},
+    "sources": 
+    [{
+      "source": "./",
+      "target": "./",
+      "exclude": [
+        ".template.config/**"]
+  	}
+    ],
+    "tags": {
+        "language": "[C#]",
+        "type": "script"
+        },    
+    "sourceName": "Company.RageMpClientScript",
+    "preferNameDirectory": true    
+        },    
+    "primaryOutputs": [
+        {
+          "path": "Company.RageMpClientScript"
+        }
+    ]
+}
