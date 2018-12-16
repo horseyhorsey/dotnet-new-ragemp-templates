@@ -18,13 +18,17 @@ The settings.xml is added as a link in the project to easily add this new templa
 This sets to server.exe for debugging. **(Use / for path seperator)**
 
 
-	dotnet new rage-serverproj -n BeastServerResourceProject -serverdir "C:/RAGEMP/server-files"
+	dotnet new rage-serverproj -n BeastServerResourceProject -se "C:/RAGEMP/server-files"
+
+Add script type **gamemode**
+
+	dotnet new rage-serverproj -n BeastServerResourceProject -se "C:/RAGEMP/server-files" -s gamemode
 
 ### Build output folder - Not required: defaults to build/netcoreapp2.0
 
 Specify output folder. 	
 
-	dotnet new rage-serverproj -n BeastServerResourceProject -serverdir "C:/RAGEMP/server-files" -b build
+	dotnet new rage-serverproj -n BeastServerResourceProject -se "C:/RAGEMP/server-files" -b build
 
 This will edit the meta.xml:
 

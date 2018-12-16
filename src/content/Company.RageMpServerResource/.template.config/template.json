@@ -50,8 +50,22 @@
         "datatype" : "text",
         "description": "Specify output folder defaulted to build\\. This default copies to Company.RageMpServerResource\\build\netcoreapp2.0",
         "replaces" : "build\\"
-      }
-    },
+      },
+      "scriptType":{
+        "description": "The type of script.",
+        "type":"parameter",
+        "datatype": "choice",
+        "defaultValue":"script",        
+        "choices": [
+          {
+              "choice": "gamemode",
+              "description": "project meta.xml type is a gamemode"
+          },
+          {
+              "choice": "script",
+              "description": "project meta.xml type is script"
+          }
+        ]}},    
     "sources": 
     [{
       "source": "./",
