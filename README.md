@@ -16,6 +16,7 @@
 
 ---
 
-## [Server Resource Readme](src/Company.RageMpServerResource.md)
-## [Server Scripts Readme](src/Company.RageMpServerScript.md)
-## [Client Scripts Readme](src/Company.RageMpClientScript.md)
+## [Solution Server / Client Readme](https://github.com/horseyhorsey/dotnet-new-ragemp-templates/blob/master/src/Company.RageSolution.md)
+## [Server Resource Readme](https://github.com/horseyhorsey/dotnet-new-ragemp-templates/blob/master/src/Company.RageMpServerResource.md)
+## [Server Scripts Readme](https://github.com/horseyhorsey/dotnet-new-ragemp-templates/blob/master/src/Company.RageMpServerScript.md)
+## [Client Scripts Readme](https://github.com/horseyhorsey/dotnet-new-ragemp-templates/blob/master/src/Company.RageMpClientScript.md)
