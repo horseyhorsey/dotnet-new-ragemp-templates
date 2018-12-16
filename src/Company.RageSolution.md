@@ -2,9 +2,15 @@
 
 This is for creating a solution anywhere but linked to your RAGEMP install path when building.
 
+All debugging etc is setup and ready to go.
+
+**Use / for rage install path to stay away from json error**
+
 ### Generate solution
 	
-	dotnet new rage-solution -r "E:\RAGEMP" -s MyBeastSolution
+	dotnet new rage-solution -r "E:/RAGEMP" -s MyBeastSolution
+
+	dotnet new rage-solution -r "E:/RAGEMP" -s MyBeastSolution -n MyBeastSolution
 
 	-r Rage install path
 	-s Solution Name

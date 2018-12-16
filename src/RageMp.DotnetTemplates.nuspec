@@ -3,9 +3,9 @@
   <metadata>
     <id>RageMp.DotnetTemplates</id>
     <licenseUrl>https://opensource.org/licenses/Apache-2.0</licenseUrl>
-    <version>1.0.3</version>    
+    <version>1.0.4</version>    
     <description>
-      Templates for creating projects / scripts for RAGE-MP
+      Templates for creating solution, projects and scripts for RAGE-MP
     </description>
     <authors>Dave Horsefield</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

@@ -2,8 +2,8 @@
   "profiles": {
     "Company.RageSolution.Server": {
       "commandName": "Executable",
-      "executablePath": "ragempinstallpath/server.exe",
-      "workingDirectory": "ragempinstallpath"
+      "executablePath": "ragempinstallpath/server-files/server.exe",
+      "workingDirectory": "ragempinstallpath/server-files"
     }
   }
 }
