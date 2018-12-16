@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="ragempinstallpath\server-files\bridge\settings.xml" Link="settings.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+	<PackageReference Include="gtanetwork.api" Version="0.3.6" />
+  </ItemGroup>
+  
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+	<OutputPath>ragempinstallpath\server-files\bridge\resources\Company.RageSolution.Server\</OutputPath>
+	<GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <None Update="meta.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

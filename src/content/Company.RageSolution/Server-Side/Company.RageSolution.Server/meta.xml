@@ -1,0 +1,7 @@
+<meta>
+ <script src="Company.RageSolution.Server.dll" /> 
+ 	<info name="Company.RageSolution.Server" type="gamemode" />
+    <settings>
+    	<settings name="my_settings" value="69" description="Example number" />
+    </settings> 	
+</meta>

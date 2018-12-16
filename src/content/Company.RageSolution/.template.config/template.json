@@ -1,0 +1,49 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Dave Horsefield",
+    "description" : "This template creates a solution containing Server and client side projects.",
+    "classifications": [ "RageMp", "Solution" ],
+    "groupIdentity": "RageMpSolution",
+    "identity": "RageMpSolution",        
+    "name": "RAGEMP - Server / Client solution",
+    "shortName": "rage-solution",
+    "symbols": {
+
+      "ragedir":{
+        "description": "The directory rage is installed in",
+        "type":"parameter",
+        "datatype" : "text",
+        "isRequired" : true,
+        "defaultValue": "E:/RAGEMP",
+        "replaces": "ragempinstallpath"
+      },
+        "solutionname": {
+            "isRequired" : true,
+            "description": "Provide a solution name. Solution and projects are created under {solutionname}.Server, .Client",
+            "type": "parameter",
+            "datatype":"text",
+            "defaultValue": "Company.RageSolution",
+            "replaces": "Company.RageSolution", 
+            "fileRename": "Company.RageSolution",
+		}
+  },    
+    "sources": 
+    [{
+      "source": "./",
+      "target": "./",
+      "exclude": [
+        ".template.config/**"]}
+    ],
+    "tags": {
+        "language": "[C#]",
+        "type": "project"
+        },    
+    "sourceName": "Company.RageMpServerResource",
+    "preferNameDirectory": true    
+        },    
+    "primaryOutputs": [
+        {
+          "path": "Company.RageMpServerResource.csproj"
+        }
+    ]
+}

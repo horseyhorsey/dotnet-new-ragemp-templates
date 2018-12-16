@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <RootNamespace>Company.RageSolution.Client</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath></OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>ragempinstallpath\dotnet\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="rage-sharp">
+      <HintPath>ragempinstallpath\dotnet\rage-sharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="MyFirstScript\MyFirstScript.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy /E /Y /R &quot;$(ProjectDir)*.cs&quot; &quot;ragempinstallpath\server-files\client_packages\cs_packages\Company.RageSolution.Client&quot;&#xD;&#xA;RD /S /Q &quot;ragempinstallpath\server-files\client_packages\cs_packages\Company.RageSolution.Client\bin&quot;&#xD;&#xA;RD /S /Q &quot;ragempinstallpath\server-files\client_packages\cs_packages\Company.RageSolution.Client\obj&quot;" />
+  </Target>
+
+</Project>
