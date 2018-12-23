@@ -25,9 +25,9 @@
           {
           	"choice" : "events",
           	"description" : "Client script with example events"
-          }    
-        ]
-     }},
+          }]
+     	}     	
+ 	},
     "sources": 
     [{
       "source": "./",

@@ -10,11 +10,11 @@ This is for creating a solution anywhere but linked to your RAGEMP install path 
 
 This generates a visual studio solution with projects needed.
 	
-	dotnet new rage-solution -r "E:/RAGEMP" -s MyBeastSolution
+	dotnet new rage-solution -r "C:/RAGEMP" -s MyBeastSolution
 
 This generates a visual studio solution with projects needed and specifying a directory.
 
-	dotnet new rage-solution -r "E:/RAGEMP" -s MyBeastSolution -n MyBeastSolution
+	dotnet new rage-solution -r "C:/RAGEMP" -s MyBeastSolution -n MyBeastSolution
 
 
 **Params:**

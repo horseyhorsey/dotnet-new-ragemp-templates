@@ -1,10 +1,10 @@
 <meta>
- <script src="build/netcoreapp2.0/Company.RageMpServerResource.dll" /> 
+ <script src="Company.RageMpServerResource.dll" description="metadescription" /> 
  <!--#if (scriptType == "script")-->
- 	<info name="Company.RageMpServerResource" type="script" />
+ 	<info name="Company.RageMpServerResource" type="script" description="metadescription"  />
  <!--#endif-->
 <!--#if (scriptType == "gamemode")-->
- 	<info name="Company.RageMpServerResource" type="gamemode" />
+ 	<info name="Company.RageMpServerResource" type="gamemode" description="metadescription"  />
     <settings>
     	<settings name="my_settings" value="69" description="Example number" />
     </settings> 	

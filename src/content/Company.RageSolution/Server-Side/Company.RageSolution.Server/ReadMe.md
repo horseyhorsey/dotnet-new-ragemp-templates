@@ -1,5 +1,3 @@
-﻿# Smoke On The Water
+# RAGEMP - Company.RageSolution.Server
 
-## Install
-
-Sotw.Server > server-files/bridge
+This is an amazing resource

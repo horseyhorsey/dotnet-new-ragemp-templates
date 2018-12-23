@@ -14,7 +14,7 @@
         "type":"parameter",
         "datatype" : "text",
         "isRequired" : true,
-        "defaultValue": "E:/RAGEMP",
+        "defaultValue": "C:/RAGEMP/",
         "replaces": "ragempinstallpath"
       },
         "solutionname": {

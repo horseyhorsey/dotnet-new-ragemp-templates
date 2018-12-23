@@ -2,8 +2,8 @@
   "profiles": {
     "Company.RageMpServerResource": {
       "commandName": "Executable",
-      "executablePath": "ragemp-server-files-dir\\server.exe",
-      "workingDirectory": "ragemp-server-files-dir"
+      "executablePath": "ragempinstallpath/server-files/server.exe",
+      "workingDirectory": "ragempinstallpath/server-files"
     }
   }
 }
