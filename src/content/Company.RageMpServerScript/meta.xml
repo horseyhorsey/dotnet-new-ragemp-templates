@@ -1,13 +1,54 @@
 <meta>
+
 <!--#if (scriptType == "script")-->
- 	<info name="Company.RageMpServerScript" type="script" description="metadescription" />
+ 	<info name="Company.RageMpServerScript" version="1.0.0" type="script" description="metadescription" />
  <!--#endif-->
+
+ <!--#if (scriptType == "map")-->
+ 	<info name="Company.RageMpServerScript" version="1.0.0"  type="map" description="metadescription" gamemodes="gamemode1,gamemode2" />
+ <!--#endif-->
+
 <!--#if (scriptType == "gamemode")-->
- 	<info name="Company.RageMpServerScript" type="gamemode" description="metadescription"  />
+ 	<info name="Company.RageMpServerScript" version="1.0.0"  type="gamemode" description="metadescription"  />
  	<!-- <include resource="playerblips" /> -->
     <settings>
     	<settings name="my_settings" value="69" description="Example number" />
     </settings> 	
  <!--#endif-->    
+
+ 	<!-- ## Links a script file with your resource. Relative path to your file.  -->
  	<script src="Company.RageMpServerScript.cs" />
+
+	<!-- ## Declares a .NET reference to be used for your scripts. ##  -->
+ 	<!-- <assembly src="System.Xml.dll"/> -->
+
+	<!-- ## List of resources that this resource depends on, and must be started before this one.  ##-->
+ 	<!-- <include resource="scoreboard"/> 		 -->
+
+ <!--#if (scriptType == "map")-->
+
+	<!-- ## Represents a .map file. The dimension in which your map will be loaded. -->
+ 	<map src=".map" dimension="UInt"></map>
+ <!--#endif--> 	
+
+	<!-- ## Used to export functions or events for other resources to use. You can only export methods located inside classes that inherit Script.  -->
+	 <!-- ## class name in which this function or event is found. (Optional if you only have one class)  -->
+ 	<!-- <export class="" function="" event=""/> -->
+
+	<!-- ## Additional rules to add to server's ACL. These may include commands that you dont wish everyone to have access to. -->
+
+	<!-- ## Relative path to the acl.xml file.  -->
+ 	<!-- <acl src=""/>  -->
+
+	<!-- ## Represents a custom XML config file to be loaded by a resource with NAPI.Resource.LoadXml -->
+ 	<!-- <config src=""/> -->
+
+	<!-- ## Declares a list of settings that the server administrator can easily change. You can also put these in a separate file, and then reference it with the src attribute.  -->
+<!--  	<settings>
+        <setting name="votelength" value="60000" default="60000" description="Vote length in milliseconds" />
+        <setting name="votecooldown" value="60000" default="60000" description="Cool down between votes." />
+
+        <setting name="enablevotemap" value="true" default="true" description="Sets whether /votemap command is enabled." />
+        <setting name="enablevotekick" value="true" default="true" description="Sets whether /votekick command is enabled." />
+    </settings> -->
 </meta>

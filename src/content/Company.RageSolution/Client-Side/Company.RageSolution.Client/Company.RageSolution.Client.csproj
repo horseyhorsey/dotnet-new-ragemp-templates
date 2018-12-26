@@ -24,8 +24,8 @@
     </Compile>
   </ItemGroup>
 
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy /E /Y /R &quot;$(ProjectDir)*.cs&quot; &quot;ragempinstallpath\server-files\client_packages\cs_packages\Company.RageSolution.Client&quot;&#xD;&#xA;RD /S /Q &quot;ragempinstallpath\server-files\client_packages\cs_packages\Company.RageSolution.Client\bin&quot;&#xD;&#xA;RD /S /Q &quot;ragempinstallpath\server-files\client_packages\cs_packages\Company.RageSolution.Client\obj&quot;" />
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">    
+  <Exec Command="if not exist &quotragempinstallpath/server-files\client_packages\cs_packages\$(TargetName)&quot; mkdir &quot;ragempinstallpath\server-files\client_packages\cs_packages\$(TargetName)&quot;&#xD;&#xA;xcopy /E /Y /R &quot;$(ProjectDir)*.cs&quot; &quot;ragempinstallpath/server-files\client_packages\cs_packages\$(TargetName)&quot;&#xD;&#xA;RD /S /Q &quot;ragempinstallpath/server-files\client_packages\cs_packages\$(TargetName)\bin&quot;&#xD;&#xA;RD /S /Q &quot;ragempinstallpath/server-files\client_packages\cs_packages\$(TargetName)\obj&quot;" />
   </Target>
 
 </Project>

@@ -72,9 +72,8 @@ public class Company.RageMpClientScript : Events.Script
     private bool ketchup = false;
     private string dish = "Banana";
     private MenuPool _menuPool;
-    private UIMenu _mainMenu;
-
-    public Company.RageMpClientScript()
+	
+	public Company.RageMpClientScript()
     {
         _menuPool = new MenuPool();
         var mainMenu = new UIMenu("Native UI", "~b~NATIVEUI SHOWCASE");
@@ -96,15 +95,8 @@ public class Company.RageMpClientScript : Events.Script
         mainMenu.Visible = true;
     }
 
-    public static void Notify(string text)
-    {
-        RAGE.Game.Ui.SetNotificationTextEntry("STRING");
-        RAGE.Game.Ui.AddTextComponentSubstringPlayerName(text);
-        RAGE.Game.Ui.DrawNotification(false, false);
-    }
-
     public void AddMenuKetchup(UIMenu menu)
-    {        
+    {
         var newitem = new UIMenuCheckboxItem("Add ketchup?", ketchup, "Do you wish to add ketchup?");
         menu.AddItem(newitem);
         menu.OnCheckboxChange += (sender, item, checked_) =>
@@ -170,13 +162,15 @@ public class Company.RageMpClientScript : Events.Script
 
     public void DrawMenu(System.Collections.Generic.List<RAGE.Events.TickNametagData> nametags)
     {
-        if (RAGE.Input.IsDown((int)ConsoleKey.M))
-        {
-            _mainMenu.Visible = !_mainMenu.Visible;
-        }
+        _menuPool.ProcessMenus();
+    }
 
-        if (_mainMenu.Visible)
-            _menuPool.ProcessMenus();
-    }  
+    public static void Notify(string text)
+    {
+        RAGE.Game.Ui.SetNotificationTextEntry("STRING");
+        RAGE.Game.Ui.AddTextComponentSubstringPlayerName(text);
+        RAGE.Game.Ui.DrawNotification(false, false);
+    }
+}
 #endif
 }

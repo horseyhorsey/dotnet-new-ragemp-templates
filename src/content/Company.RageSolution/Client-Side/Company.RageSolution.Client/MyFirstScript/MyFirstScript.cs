@@ -25,8 +25,5 @@ public class MyFirstScript : Events.Script
             Chat.Output($"Armour");
             RAGE.Elements.Player.LocalPlayer.SetArmour(100);
         }
-
-	//Use this to cancel server call for this command??
-        cancel.Cancel = true;
     }
 }

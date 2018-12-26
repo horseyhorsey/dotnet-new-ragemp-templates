@@ -33,7 +33,11 @@
           {
               "choice": "script",
               "description": "Script is std script"
-          }          
+          },  
+          {
+              "choice": "map",
+              "description": "Script is a map"
+          }    
         ]
      }},
     "sources": 
