@@ -1,0 +1,39 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Dave Horsefield",
+    "description" : "This template creates a RAGE-MP client resource defaulted to netcoreapp2.1. 
+    	It doesn't get built to dll but rather a housing for CSharp files to be built into RAGEMP client packages. (Specify a name with -n)",
+    "classifications": [ "RageMp", "Client" ],
+    "groupIdentity": "RageMpClientResource",
+    "identity": "RageMpClientResource",        
+    "name": "RAGEMP - Client Side Resource csproj",
+    "shortName": "rage-clientproj",
+    "symbols": {
+      "ragemp":{
+        "description": "The RAGEMP install path. (USE / for path seperator)",
+        "type":"parameter",
+        "datatype" : "text",
+        "isRequired" : false,
+        "defaultValue": "C:/RAGEMP/",
+        "replaces": "ragempinstallpath"
+      }},    
+    "sources": 
+    [{
+      "source": "./",
+      "target": "./",
+      "exclude": [
+        ".template.config/**"]}
+    ],
+    "tags": {
+        "language": "[C#]",
+        "type": "project"
+        },    
+    "sourceName": "Company.RageMpClientResource",
+    "preferNameDirectory": true    
+        },    
+    "primaryOutputs": [
+        {
+          "path": "Company.RageMpClientResource.csproj"
+        }
+    ]
+}
