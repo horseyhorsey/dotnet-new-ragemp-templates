@@ -17,8 +17,7 @@
     <Content Include="ragempinstallpath\server-files\bridge\settings.xml" Link="settings.xml" />
   </ItemGroup>
   
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-	<OutputPath>ragempinstallpath\server-files\resources\Company.RageSolution.Server\</OutputPath>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">	
 	<GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
   </PropertyGroup>
   
@@ -28,8 +27,9 @@
     </None>
   </ItemGroup>
   
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="if not exist &quot;ragempinstallpath\server-files\resources\$(TargetName)&quot; mkdir &quot;ragempinstallpath\server-files\resources\$(TargetName)&quot;&#xD;&#xA;if not exist &quot;ragempinstallpath\server-files\bridge\resources\$(TargetName)&quot; mkdir &quot;ragempinstallpath\server-files\bridge\resources\$(TargetName)&quot;&#xD;&#xA;xcopy /E /Y /R &quot;$(TargetDir)*.*&quot; &quot;ragempinstallpath\server-files\bridge\resources\$(TargetName)\*.*&quot;" />
-  </Target>
+  <!--Creates dummy directory in server-files/resources.......then copies the resource assembly, pdb and meta.xml.....put shared libraries into runtime-->
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">    
+	<Exec Command="if not exist &quot;ragempinstallpath/server-files\bridge\resources\$(TargetName)&quot; mkdir &quot;ragempinstallpath\server-files\bridge\resources\$(TargetName)&quot;&#xD;&#xA;if not exist &quot;ragempinstallpath/server-files\resources\$(TargetName)&quot; mkdir &quot;ragempinstallpath\server-files\resources\$(TargetName)&quot;&#xD;&#xA;xcopy /E /Y /R &quot;$(TargetDir)meta.xml&quot; &quot;ragempinstallpath\server-files\bridge\resources\$(TargetName)\&quot;&#xD;&#xA;xcopy /E /Y /R &quot;$(TargetDir)$(TargetName).dll&quot; &quot;ragempinstallpath\server-files\bridge\resources\$(TargetName)\&quot;&#xD;&#xA;xcopy /E /Y /R &quot;$(TargetDir)$(TargetName).pdb&quot; &quot;ragempinstallpath\server-files\bridge\resources\$(TargetName)\&quot;" />
+  </Target>  
 
 </Project>

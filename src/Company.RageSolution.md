@@ -19,7 +19,8 @@ This generates a visual studio solution with projects needed and specifying a di
 
 **Params:**
 
-	-r Rage install path
+	-r Rage install path (not required)
+	-n Name of directory and resource
 	-s Solution Name
 
 **Output structure:**
@@ -49,16 +50,29 @@ Now you can run the server project in debug.
 
 # Projects Info
 
-### Server-Side
-When the Server builds, it will only copy the needed references to:
+## Server-Side
+---
 
-	{RAGEMP_InstallDir}\server-files\bridge\resources\MyBeastSolution.Server
+When building the server project the build events are set to only copy the following:
 
-This is referenced in the meta.xml:
+	bridge/resources/
+		$(TargetName)/
+	 		meta.xml
+	 		$(TargetName).dll
+	 		$(TargetName).pdb		
 
-	<script src="MyBeastSolution.Server.dll" /> 
+Shared resources are better off in for server load up times.
 
-### Client-Side
+	bridge/runtime  
+
+### NOTE:
+
+*A dummy folder is created inside server-files/resources*
+
+This folder will allow you to use the NAPI.Resource Start/Stop etc. If loading a map the maps are loaded from here too.
+
+---
+## Client-Side
 
 On building, only the .cs are copied. Folders containing .cs files are also copied like the example above, **MyBeastSolution.Client\MyFirstScript**
 

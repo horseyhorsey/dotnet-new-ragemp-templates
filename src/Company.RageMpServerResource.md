@@ -36,3 +36,17 @@ Created and points to:
 	<script src="BeastServerResourceProject.dll" />
 
 
+---
+# Build Information
+
+When building the server project the build events are set to only copy the following:
+
+	bridge/resources/
+		$(TargetName)/
+	 		meta.xml
+	 		$(TargetName).dll
+	 		$(TargetName).pdb		
+
+Shared resources are probably better off in
+
+	bridge/runtime  

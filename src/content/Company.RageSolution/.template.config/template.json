@@ -13,7 +13,7 @@
         "description": "The directory rage is installed in",
         "type":"parameter",
         "datatype" : "text",
-        "isRequired" : true,
+        "isRequired" : false,
         "defaultValue": "C:/RAGEMP/",
         "replaces": "ragempinstallpath"
       },
